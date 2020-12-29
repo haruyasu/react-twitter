@@ -82,6 +82,7 @@ const Post: React.FC<PROPS> = (props) => {
         })
         setComment('')
     }
+
     return (
         <div className={styles.post}>
             <div className={styles.post_avatar}>
@@ -131,7 +132,7 @@ const Post: React.FC<PROPS> = (props) => {
                                 <input
                                     className={styles.post_input}
                                     type='text'
-                                    placeholder='Type new comment...'
+                                    placeholder='コメントを入力する'
                                     value={comment}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                                         setComment(e.target.value)

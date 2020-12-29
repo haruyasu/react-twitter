@@ -18,11 +18,11 @@ function TweetInput() {
             e.target.value = ''
         }
     }
+
     const sendTweet = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (tweetImage) {
-            const S =
-                'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+            const S = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
             const N = 16
             const randomChar = Array.from(crypto.getRandomValues(new Uint32Array(N)))
                 .map((n) => S[n % S.length])
@@ -77,7 +77,7 @@ function TweetInput() {
                     />
                     <input
                         className={styles.tweet_input}
-                        placeholder='Whats happening?'
+                        placeholder='いまどうしてる？'
                         type='text'
                         autoFocus
                         value={tweetMsg}
@@ -106,7 +106,7 @@ function TweetInput() {
                         tweetMsg ? styles.tweet_sendBtn : styles.tweet_sendDisableBtn
                     }
                 >
-                    Tweet
+                    ツイートする
                 </Button>
             </form>
         </>

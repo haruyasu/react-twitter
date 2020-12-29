@@ -152,7 +152,7 @@ const Auth: React.FC = () => {
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component='h1' variant='h5'>
-                        {isLogin ? 'Login' : 'Register'}
+                        {isLogin ? 'ログイン' : 'サインアップ'}
                     </Typography>
                     <form className={classes.form} noValidate>
                         {!isLogin && (
@@ -163,7 +163,7 @@ const Auth: React.FC = () => {
                                     required
                                     fullWidth
                                     id='username'
-                                    label='Username'
+                                    label='ユーザー名'
                                     name='username'
                                     autoComplete='username'
                                     autoFocus
@@ -199,7 +199,7 @@ const Auth: React.FC = () => {
                             required
                             fullWidth
                             id='email'
-                            label='Email Address'
+                            label='メールアドレス'
                             name='email'
                             autoComplete='email'
                             value={email}
@@ -213,7 +213,7 @@ const Auth: React.FC = () => {
                             required
                             fullWidth
                             name='password'
-                            label='Password'
+                            label='パスワード'
                             type='password'
                             id='password'
                             autoComplete='current-password'
@@ -252,7 +252,7 @@ const Auth: React.FC = () => {
                                     }
                             }
                         >
-                            {isLogin ? 'Login' : 'Register'}
+                            {isLogin ? 'ログイン' : 'サインアップ'}
                         </Button>
                         <Grid container>
                             <Grid item xs>
@@ -268,7 +268,7 @@ const Auth: React.FC = () => {
                                     className={styles.login_toggleMode}
                                     onClick={() => setIsLogin(!isLogin)}
                                 >
-                                    {isLogin ? 'Create new account ?' : 'Back to login'}
+                                    {isLogin ? '新しいアカウントを作成' : 'ログイン'}
                                 </span>
                             </Grid>
                         </Grid>
@@ -294,7 +294,7 @@ const Auth: React.FC = () => {
                                     }}
                                     type='email'
                                     name='email'
-                                    label='Reset E-mail'
+                                    label='メールアドレスをリセット'
                                     value={resetEmail}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                                         setResetEmail(e.target.value)
