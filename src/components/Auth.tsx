@@ -260,7 +260,7 @@ const Auth: React.FC = () => {
                                     className={styles.login_reset}
                                     onClick={() => setOpenModal(true)}
                                 >
-                                    Forgot password ?
+                                    パスワードを忘れた方
                                 </span>
                             </Grid>
                             <Grid item>
